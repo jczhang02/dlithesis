@@ -1,0 +1,33 @@
+name: Build and Release LaTeX document
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+    - 'v*'
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build_release_latex:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: thesis.tex
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
+          extra_fonts: |
+              ./fonts/STXingKai.TTF
+          
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF
+          path: thesis.pdf

@@ -1,0 +1,27 @@
+% Xformer figure tikz settings.
+\definecolor{hiddendraw}{RGB}{205, 44, 36}
+\definecolor{hidden-blue}{RGB}{194,232,247}
+\definecolor{hidden-orange}{RGB}{243,202,120}
+\definecolor{hidden-yellow}{RGB}{242,244,193}
+\tikzstyle{mybox}=[
+rectangle,
+draw=hiddendraw,
+rounded corners,
+text opacity=1,
+minimum height=1.5em,
+minimum width=5em,
+inner sep=2pt,
+align=center,
+fill opacity=.5,
+]
+
+
+\setminted[python]{linenos,
+	autogobble=true,
+	numbersep=8pt,
+	breaklines,
+	frame=lines,
+	framesep=2mm,
+}
+
+\newenvironment{code}{\captionsetup{type=listing}}{}

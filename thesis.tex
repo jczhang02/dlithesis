@@ -1,0 +1,56 @@
+% !Tex program = xelatex
+% NOTE: The `{{ }}` is necessary for value that have space like StudentName
+\documentclass[
+    Title = {{Operator Learning for Partial Differential Equations with Attention Mechanism}},
+    Major = {{Mathematics}},
+    StudentName = {{Chengrui Zhang}},
+    StudentID = {{00000000}},
+    SupervisorName = {{First Name Second Name}},
+    SupervisorTitle = {{Assoc. Prof/Prof.}},
+    CompletionDate = {{2024-05-15}},
+    ReviewerName = {{Reviewer}},
+    TwoSide=false,
+    ]{dlithesis}
+
+% Paper specific preamble.
+\input{body/preamble.tex}
+
+\begin{document}
+\maketitle
+
+\makestatement
+\makecopyright
+
+\frontmatter
+
+% Abstract.
+\input{body/abstract.tex}
+
+\maketoc
+
+\mainmatter
+
+% Chapter 1. Introduction.
+\include{body/chapter1.tex}
+
+% Chapter 2. The Proposed Method.
+% \include{body/chapter2/main.tex}
+
+% Chapter 3. Experiments.
+% \include{body/chapter3/main.tex}
+
+% Chapter 4. Conclusion and Future Works.
+% \include{body/chapter4/main.tex}
+
+% \backmatter
+
+% References.
+\makereflist
+
+% Acknowledgement
+\include{body/acknowledgement.tex}
+
+% Revision.
+\include{body/revision.tex}
+
+\end{document}
